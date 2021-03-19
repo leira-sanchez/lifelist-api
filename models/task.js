@@ -11,5 +11,10 @@ module.exports = (sequelize, DataTypes) => {
   task.associate = (models) => {
     task.belongsTo(models.list, { foreignKey: "listId", sourceKey: "id" });
     task.belongsTo(models.user, { foreignKey: "ownerId", sourceKey: "id" });
+    task.belongsToMany(models.task, {
+      through: "taskTag",
+      as: "tags",
+      foreignKey: "taskId",
+    });
   };
 };
