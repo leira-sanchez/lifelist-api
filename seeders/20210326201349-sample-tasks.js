@@ -2,25 +2,26 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return await queryInterface.bulkInsert("Users", [
+    return await queryInterface.bulkInsert("Tasks", [
       {
-        name: "Harry",
-        email: "harry.potter@hogwarts.edu",
-        isDarkModeEnabled: true,
+        title: "walk the dog",
+        completedAt: new Date(),
+        listId: 1,
+        ownerId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "Hermione",
-        email: "hermione.granger@hogwarts.edu",
-        isDarkModeEnabled: false,
+        title: "read a book",
+        listId: 1,
+        ownerId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "Ron",
-        email: "ronald.weasley@hogwarts.edu",
-        isDarkModeEnabled: false,
+        title: "lavar la Jeepta",
+        listId: 1,
+        ownerId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },

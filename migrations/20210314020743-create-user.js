@@ -9,10 +9,17 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING,
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING,
+      },
+      isDarkModeEnabled: {
+        allowNull: false,
+        default: false,
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,

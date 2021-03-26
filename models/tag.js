@@ -10,4 +10,5 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "tagId",
     });
   };
+  return tag;
 };

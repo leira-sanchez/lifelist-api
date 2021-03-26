@@ -16,7 +16,7 @@
     "sequelize-cli": "^6.2.0"
   },
   "scripts": {
-    "dev": "nodemon -r dotenv/config app.js",
+    "start": "nodemon -r dotenv/config app.js",
     "db:create": "sequelize-cli db:create",
     "db:migrate": "sequelize-cli db:migrate",
     "db:g:migration": "sequelize-cli migration:generate --name",

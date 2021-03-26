@@ -1,6 +1,4 @@
 "use strict";
-const { Model } = require("sequelize");
-const user = require("./user");
 module.exports = (sequelize, DataTypes) => {
   const task = sequelize.define("task", {
     title: DataTypes.STRING,
@@ -17,4 +15,5 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "taskId",
     });
   };
+  return task;
 };
